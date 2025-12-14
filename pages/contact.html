@@ -8,6 +8,7 @@
       content="Contact Car Rental Reservation Platform - We're here to help"
     />
     <title>Contact Us - Car Rental Reservation Platform</title>
+
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,9 +17,11 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
+    <!-- Header -->
     <header>
       <nav class="navbar" role="navigation" aria-label="Main navigation">
         <a
@@ -29,26 +32,33 @@
           <span class="logo-icon">🚗</span>
           <span>CarRental</span>
         </a>
+
         <ul class="nav-menu" id="nav-menu">
           <li><a href="../index.html" class="nav-link">Home</a></li>
           <li><a href="cars.html" class="nav-link">Cars</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          <li>
+            <a href="contact.html" class="nav-link active">Contact</a>
+          </li>
           <li><a href="faq.html" class="nav-link">FAQ</a></li>
         </ul>
+
         <div class="nav-actions">
           <button
             class="theme-toggle"
             id="theme-toggle"
             aria-label="Toggle dark mode"
+            type="button"
           >
             🌙
           </button>
+
           <button
             class="hamburger"
             id="hamburger"
             aria-label="Toggle menu"
             aria-expanded="false"
+            type="button"
           >
             <span></span>
             <span></span>
@@ -58,6 +68,7 @@
       </nav>
     </header>
 
+    <!-- Main -->
     <main id="main-content">
       <section class="section">
         <div class="container">
@@ -72,6 +83,7 @@
               margin: 0 auto;
             "
           >
+            <!-- Left -->
             <div>
               <h2>Get in Touch</h2>
               <p>
@@ -84,7 +96,7 @@
                 <p><strong>Email:</strong> info@carrental.com</p>
                 <p><strong>Phone:</strong> 1-800-CAR-RENT</p>
                 <p>
-                  <strong>Hours:</strong> Monday - Friday: 9:00 AM - 6:00 PM
+                  <strong>Hours:</strong> Monday – Friday: 9:00 AM – 6:00 PM
                 </p>
                 <p>
                   <strong>Address:</strong> 123 Rental Street, City, State 12345
@@ -92,6 +104,7 @@
               </div>
             </div>
 
+            <!-- Right -->
             <div>
               <form id="contact-form" class="reservation-form">
                 <div class="form-group">
@@ -125,12 +138,12 @@
                     id="contact-message"
                     name="message"
                     rows="6"
-                    required
                     maxlength="1000"
+                    required
                     placeholder="Tell us how we can help..."
                   ></textarea>
                   <div id="contact-char-counter" class="character-counter">
-                    0/1000 characters
+                    0 / 1000 characters
                   </div>
                 </div>
 
@@ -144,12 +157,17 @@
       </section>
     </main>
 
+    <!-- ✅ Footer (same as Home & Cars) -->
     <footer role="contentinfo">
       <div class="footer-content">
         <div class="footer-section">
           <h3>CarRental</h3>
-          <p>Your trusted partner for car rentals.</p>
+          <p>
+            Your trusted partner for car rentals. We make it easy to find and
+            book the perfect vehicle for your journey.
+          </p>
         </div>
+
         <div class="footer-section">
           <h3>Quick Links</h3>
           <ul class="footer-links">
@@ -159,16 +177,82 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
+
+        <div class="footer-section">
+          <h3>Support</h3>
+          <ul class="footer-links">
+            <li><a href="faq.html">FAQ</a></li>
+            <li>
+              <a
+                href="#"
+                class="js-open-modal"
+                data-modal-title="Terms & Conditions"
+                data-modal-template="tpl-terms"
+                >Terms & Conditions</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="js-open-modal"
+                data-modal-title="Privacy Policy"
+                data-modal-template="tpl-privacy"
+                >Privacy Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: info@carrental.com</p>
+          <p>Phone: 1-800-CAR-RENT</p>
+        </div>
       </div>
+
       <div class="footer-bottom">
         <p>&copy; 2025 Car Rental Reservation Platform. All rights reserved.</p>
       </div>
     </footer>
 
+    <!-- ✅ Modal Templates -->
+    <template id="tpl-terms">
+      <p>By using this website, you agree to follow these terms and conditions.</p>
+      <p>
+        All vehicle information, prices, and availability shown are for reference
+        purposes only.
+      </p>
+      <p>Bookings made through this website are subject to confirmation.</p>
+      <p>Users are responsible for providing accurate and complete information.</p>
+      <p>
+        The website owner is not responsible for any losses caused by incorrect
+        information or misuse of the website.
+      </p>
+    </template>
+
+    <template id="tpl-privacy">
+      <p>
+        We respect your privacy and are committed to protecting your personal
+        information.
+      </p>
+      <p>
+        Any information you provide on this website is used only to improve your
+        booking and browsing experience.
+      </p>
+      <p>We do not sell, rent, or share your personal data with third parties.</p>
+      <p>
+        This website may use basic cookies to enhance user experience and website
+        functionality.
+      </p>
+      <p>By using this website, you agree to this privacy policy.</p>
+    </template>
+
+    <!-- Back to Top -->
     <button class="back-to-top" id="back-to-top" aria-label="Back to top">
       ↑
     </button>
 
+    <!-- Main JS -->
     <script src="../assets/js/app.js"></script>
   </body>
 </html>
