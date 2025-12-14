@@ -1,1 +1,100 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <meta name="description" content="Browse our wide selection of rental cars - Sedans, SUVs, Luxury, and Compact vehicles" /> <title>Cars - Car Rental Reservation Platform</title> <link rel="stylesheet" href="../assets/css/styles.css" /> <link rel="preconnect" href="https://fonts.googleapis.com" /> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /> </head> <body> <a href="#main-content" class="skip-link">Skip to main content</a> <header> <nav class="navbar" role="navigation" aria-label="Main navigation"> <a href="../index.html" class="logo" aria-label="Car Rental Platform Home" > <span class="logo-icon">🚗</span> <span>CarRental</span> </a> <ul class="nav-menu" id="nav-menu"> <li><a href="../index.html" class="nav-link">Home</a></li> <li><a href="cars.html" class="nav-link active">Cars</a></li> <li><a href="about.html" class="nav-link">About</a></li> <li><a href="contact.html" class="nav-link">Contact</a></li> <li><a href="faq.html" class="nav-link">FAQ</a></li> </ul> <div class="nav-actions"> <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" > 🌙 </button> <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" > <span></span> <span></span> <span></span> </button> </div> </nav> </header> <main id="main-content"> <section class="section"> <div class="container"> <h1 class="section-title">Browse Our Fleet</h1> <!-- Search and Sort Bar --> <div class="search-sort-bar"> <input type="text" id="car-search" class="search-input" placeholder="Search by car name or type..." aria-label="Search cars" /> <select id="sort-cars" class="sort-select" aria-label="Sort cars"> <option value="default">Sort by: Default</option> <option value="price-low">Price: Low to High</option> <option value="price-high">Price: High to Low</option> <option value="rating">Rating: Highest First</option> </select> </div> <div class="cars-layout"> <!-- Filter Panel --> <aside class="filter-panel" aria-label="Filter options"> <h2 style="margin-bottom: 1.5rem; font-size: 1.25rem">Filters</h2> <div class="filter-group"> <label for="price-min">Price Range</label> <input type="range" id="price-min" min="0" max="200" value="0" step="5" /> <input type="range" id="price-max" min="0" max="200" value="200" step="5" /> <div id="price-range-display" style=" text-align: center; margin-top: 0.5rem; font-weight: 600; " > $0 - $200 </div> </div> <div class="filter-group"> <label for="filter-transmission">Transmission</label> <select id="filter-transmission"> <option value="all">All</option> <option value="Automatic">Automatic</option> <option value="Manual">Manual</option> </select> </div> <div class="filter-group"> <label for="filter-seats">Seats</label> <select id="filter-seats"> <option value="all">All</option> <option value="4">4 Seats</option> <option value="5">5 Seats</option> <option value="7">7 Seats</option> </select> </div> <div class="filter-group"> <label for="filter-fuel">Fuel Type</label> <select id="filter-fuel"> <option value="all">All</option> <option value="Gasoline">Gasoline</option> <option value="Hybrid">Hybrid</option> <option value="Electric">Electric</option> </select> </div> <div class="filter-group"> <label for="filter-rating">Minimum Rating</label> <select id="filter-rating"> <option value="0">All Ratings</option> <option value="4.5">4.5+ Stars</option> <option value="4.7">4.7+ Stars</option> <option value="4.9">4.9+ Stars</option> </select> </div> <div class="filter-actions"> <button class="btn btn-secondary btn-full" onclick="resetFilters()" > Reset Filters </button> </div> </aside> <!-- Cars Grid --> <div> <div class="cards-grid" id="cars-container"> <!-- Cars will be rendered by JavaScript --> </div> </div> </div> </div> </section> </main> <footer role="contentinfo"> <div class="footer-content"> <div class="footer-section"> <h3>CarRental</h3> <p>Your trusted partner for car rentals.</p> </div> <div class="footer-section"> <h3>Quick Links</h3> <ul class="footer-links"> <li><a href="../index.html">Home</a></li> <li><a href="cars.html">Browse Cars</a></li> <li><a href="about.html">About Us</a></li> <li><a href="contact.html">Contact</a></li> </ul> </div> <div class="footer-section"> <h3>Support</h3> <ul class="footer-links"> <li><a href="faq.html">FAQ</a></li> <li> <a href="#" onclick="openModal('Terms & Conditions', '<p>Terms and conditions content goes here...</p>'); return false;" >Terms & Conditions</a > </li> </ul> </div> </div> <div class="footer-bottom"> <p>&copy; 2025 Car Rental Reservation Platform. All rights reserved.</p> </div> </footer> <button class="back-to-top" id="back-to-top" aria-label="Back to top"> ↑ </button> <script> function resetFilters() { document.getElementById("car-search").value = ""; document.getElementById("price-min").value = 0; document.getElementById("price-max").value = 200; document.getElementById("filter-transmission").value = "all"; document.getElementById("filter-seats").value = "all"; document.getElementById("filter-fuel").value = "all"; document.getElementById("filter-rating").value = 0; document.getElementById("sort-cars").value = "default"; if (typeof filterCars === "function") { filterCars(); } } </script> <script src="../assets/js/app.js"></script> </body> </html>
+<footer role="contentinfo">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>CarRental</h3>
+      <p>
+        Your trusted partner for car rentals. We make it easy to find and book
+        the perfect vehicle for your journey.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="cars.html">Browse Cars</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Support</h3>
+      <ul class="footer-links">
+        <li><a href="faq.html">FAQ</a></li>
+
+        <!-- ✅ FIXED: No jump to top + opens modal -->
+        <li>
+          <a
+            href="#"
+            class="js-open-modal"
+            data-modal-title="Terms & Conditions"
+            data-modal-template="tpl-terms"
+            >Terms & Conditions</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="js-open-modal"
+            data-modal-title="Privacy Policy"
+            data-modal-template="tpl-privacy"
+            >Privacy Policy</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>Email: info@carrental.com</p>
+      <p>Phone: 1-800-CAR-RENT</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Car Rental Reservation Platform. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ✅ REQUIRED: Modal content templates (works with your updated app.js) -->
+<template id="tpl-terms">
+  <p>
+    By using this website, you agree to follow these terms and conditions.
+  </p>
+  <p>
+    All vehicle information, prices, and availability shown are for reference
+    purposes only.
+  </p>
+  <p>
+    Bookings made through this website are subject to confirmation.
+  </p>
+  <p>
+    Users are responsible for providing accurate and complete information.
+  </p>
+  <p>
+    The website owner is not responsible for any losses caused by incorrect
+    information or misuse of the website.
+  </p>
+</template>
+
+<template id="tpl-privacy">
+  <p>
+    We respect your privacy and are committed to protecting your personal
+    information.
+  </p>
+  <p>
+    Any information you provide on this website is used only to improve your
+    booking and browsing experience.
+  </p>
+  <p>
+    We do not sell, rent, or share your personal data with third parties.
+  </p>
+  <p>
+    This website may use basic cookies to enhance user experience and website
+    functionality.
+  </p>
+  <p>
+    By using this website, you agree to this privacy policy.
+  </p>
+</template>
