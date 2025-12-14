@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <!-- Skip to Content Link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -39,6 +40,7 @@
             class="theme-toggle"
             id="theme-toggle"
             aria-label="Toggle dark mode"
+            type="button"
           >
             🌙
           </button>
@@ -47,6 +49,7 @@
             id="hamburger"
             aria-label="Toggle menu"
             aria-expanded="false"
+            type="button"
           >
             <span></span>
             <span></span>
@@ -242,16 +245,12 @@
           <h2 id="faq-teaser-title" class="section-title">
             Frequently Asked Questions
           </h2>
-          <div style="max-width: 800px; margin: 0 auto">
-          
+
           <div style="text-align: center; margin-top: 2rem">
             <a href="pages/faq.html" class="btn btn-secondary">View All FAQs</a>
           </div>
         </div>
-        </div>
-          
       </section>
-
     </main>
 
     <!-- Footer -->
@@ -264,6 +263,7 @@
             book the perfect vehicle for your journey.
           </p>
         </div>
+
         <div class="footer-section">
           <h3>Quick Links</h3>
           <ul class="footer-links">
@@ -273,60 +273,98 @@
             <li><a href="pages/contact.html">Contact</a></li>
           </ul>
         </div>
+
         <div class="footer-section">
           <h3>Support</h3>
           <ul class="footer-links">
             <li><a href="pages/faq.html">FAQ</a></li>
             <li>
+              <!-- ✅ No # anymore -->
               <a
-                href="#"
-                onclick="openModal('Terms & Conditions', '<p>
-                                   
-By using this website, you agree to follow these terms and conditions.
-
-All vehicle information, prices, and availability shown are for reference purposes only.
-
-Bookings made through this website are subject to confirmation.
-
-Users are responsible for providing accurate and complete information.
-
-The website owner is not responsible for any losses caused by incorrect information or misuse of the website.</p>'); return false;"
-                >Terms & Conditions</a
+                href="javascript:void(0)"
+                class="js-open-modal"
+                data-modal-title="Terms & Conditions"
+                data-modal-template="tpl-terms"
               >
+                Terms & Conditions
+              </a>
             </li>
             <li>
+              <!-- ✅ No # anymore -->
               <a
-                href="#"
-                onclick="openModal('Privacy Policy', '<p>
-We respect your privacy and are committed to protecting your personal information.
-
-Any information you provide on this website is used only to improve your booking and browsing experience.
-
-We do not sell, rent, or share your personal data with third parties.
-
-This website may use basic cookies to enhance user experience and website functionality.
-
-By using this website, you agree to this privacy policy.</p>'); return false;"
-                >Privacy Policy</a
+                href="javascript:void(0)"
+                class="js-open-modal"
+                data-modal-title="Privacy Policy"
+                data-modal-template="tpl-privacy"
               >
+                Privacy Policy
+              </a>
             </li>
           </ul>
         </div>
+
         <div class="footer-section">
           <h3>Contact</h3>
           <p>Email: info@carrental.com</p>
           <p>Phone: 1-800-CAR-RENT</p>
         </div>
       </div>
+
       <div class="footer-bottom">
         <p>&copy; 2025 Car Rental Reservation Platform. All rights reserved.</p>
       </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top" type="button">
       ↑
     </button>
+
+    <!-- ✅ Modal Markup (add once, near end of body) -->
+    <div class="modal" id="site-modal" aria-hidden="true">
+      <div class="modal-overlay" data-modal-close></div>
+
+      <div
+        class="modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="site-modal-title"
+      >
+        <div class="modal-header">
+          <h2 id="site-modal-title" class="modal-title">Modal Title</h2>
+          <button class="modal-close" type="button" aria-label="Close modal" data-modal-close>
+            ✕
+          </button>
+        </div>
+
+        <div class="modal-body" id="site-modal-body"></div>
+      </div>
+    </div>
+
+    <!-- ✅ Modal Content Templates (safe + clean) -->
+    <template id="tpl-terms">
+      <p>
+        By using this website, you agree to follow these terms and conditions.
+      </p>
+      <ul>
+        <li>All vehicle information, prices, and availability shown are for reference only.</li>
+        <li>Bookings made through this website are subject to confirmation.</li>
+        <li>Users are responsible for providing accurate and complete information.</li>
+        <li>The website owner is not responsible for losses caused by incorrect information or misuse.</li>
+      </ul>
+    </template>
+
+    <template id="tpl-privacy">
+      <p>
+        We respect your privacy and are committed to protecting your personal information.
+      </p>
+      <ul>
+        <li>Information you provide is used only to improve booking and browsing experience.</li>
+        <li>We do not sell, rent, or share your personal data with third parties.</li>
+        <li>This website may use basic cookies to enhance functionality.</li>
+        <li>By using this website, you agree to this privacy policy.</li>
+      </ul>
+    </template>
 
     <script src="assets/js/app.js"></script>
   </body>
