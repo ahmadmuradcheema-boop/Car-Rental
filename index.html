@@ -16,7 +16,6 @@
       rel="stylesheet"
     />
   </head>
-
   <body>
     <!-- Skip to Content Link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -40,7 +39,6 @@
             class="theme-toggle"
             id="theme-toggle"
             aria-label="Toggle dark mode"
-            type="button"
           >
             🌙
           </button>
@@ -49,7 +47,6 @@
             id="hamburger"
             aria-label="Toggle menu"
             aria-expanded="false"
-            type="button"
           >
             <span></span>
             <span></span>
@@ -245,7 +242,49 @@
           <h2 id="faq-teaser-title" class="section-title">
             Frequently Asked Questions
           </h2>
-
+          <div style="max-width: 800px; margin: 0 auto">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What documents do I need to rent a car?
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  <p>
+                    You'll need a valid driver's license, a credit card in your
+                    name, and proof of insurance (if required in your location).
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can I cancel or modify my reservation?
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  <p>
+                    Yes, you can cancel or modify your reservation up to 24
+                    hours before your pickup time. Visit the "My Booking" page
+                    to make changes.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What happens if I return the car late?
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  <p>
+                    Late returns may incur additional charges. We recommend
+                    contacting us if you anticipate being late to discuss
+                    options.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
           <div style="text-align: center; margin-top: 2rem">
             <a href="pages/faq.html" class="btn btn-secondary">View All FAQs</a>
           </div>
@@ -263,7 +302,6 @@
             book the perfect vehicle for your journey.
           </p>
         </div>
-
         <div class="footer-section">
           <h3>Quick Links</h3>
           <ul class="footer-links">
@@ -273,98 +311,41 @@
             <li><a href="pages/contact.html">Contact</a></li>
           </ul>
         </div>
-
         <div class="footer-section">
           <h3>Support</h3>
           <ul class="footer-links">
             <li><a href="pages/faq.html">FAQ</a></li>
             <li>
-              <!-- ✅ No # anymore -->
               <a
-                href="javascript:void(0)"
-                class="js-open-modal"
-                data-modal-title="Terms & Conditions"
-                data-modal-template="tpl-terms"
+                href="#"
+                onclick="openModal('Terms & Conditions', '<p>Terms and conditions content goes here...</p>'); return false;"
+                >Terms & Conditions</a
               >
-                Terms & Conditions
-              </a>
             </li>
             <li>
-              <!-- ✅ No # anymore -->
               <a
-                href="javascript:void(0)"
-                class="js-open-modal"
-                data-modal-title="Privacy Policy"
-                data-modal-template="tpl-privacy"
+                href="#"
+                onclick="openModal('Privacy Policy', '<p>Privacy policy content goes here...</p>'); return false;"
+                >Privacy Policy</a
               >
-                Privacy Policy
-              </a>
             </li>
           </ul>
         </div>
-
         <div class="footer-section">
           <h3>Contact</h3>
           <p>Email: info@carrental.com</p>
           <p>Phone: 1-800-CAR-RENT</p>
         </div>
       </div>
-
       <div class="footer-bottom">
         <p>&copy; 2025 Car Rental Reservation Platform. All rights reserved.</p>
       </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" id="back-to-top" aria-label="Back to top" type="button">
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
       ↑
     </button>
-
-    <!-- ✅ Modal Markup (add once, near end of body) -->
-    <div class="modal" id="site-modal" aria-hidden="true">
-      <div class="modal-overlay" data-modal-close></div>
-
-      <div
-        class="modal-dialog"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="site-modal-title"
-      >
-        <div class="modal-header">
-          <h2 id="site-modal-title" class="modal-title">Modal Title</h2>
-          <button class="modal-close" type="button" aria-label="Close modal" data-modal-close>
-            ✕
-          </button>
-        </div>
-
-        <div class="modal-body" id="site-modal-body"></div>
-      </div>
-    </div>
-
-    <!-- ✅ Modal Content Templates (safe + clean) -->
-    <template id="tpl-terms">
-      <p>
-        By using this website, you agree to follow these terms and conditions.
-      </p>
-      <ul>
-        <li>All vehicle information, prices, and availability shown are for reference only.</li>
-        <li>Bookings made through this website are subject to confirmation.</li>
-        <li>Users are responsible for providing accurate and complete information.</li>
-        <li>The website owner is not responsible for losses caused by incorrect information or misuse.</li>
-      </ul>
-    </template>
-
-    <template id="tpl-privacy">
-      <p>
-        We respect your privacy and are committed to protecting your personal information.
-      </p>
-      <ul>
-        <li>Information you provide is used only to improve booking and browsing experience.</li>
-        <li>We do not sell, rent, or share your personal data with third parties.</li>
-        <li>This website may use basic cookies to enhance functionality.</li>
-        <li>By using this website, you agree to this privacy policy.</li>
-      </ul>
-    </template>
 
     <script src="assets/js/app.js"></script>
   </body>
