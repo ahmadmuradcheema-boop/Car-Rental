@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="View detailed information about our rental car"
+    />
+    <title>Car Details - Car Rental Reservation Platform</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <a
+          href="../index.html"
+          class="logo"
+          aria-label="Car Rental Platform Home"
+        >
+          <span class="logo-icon">🚗</span>
+          <span>CarRental</span>
+        </a>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="cars.html" class="nav-link">Cars</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle dark mode"
+          >
+            🌙
+          </button>
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="section">
+        <div class="container">
+          <div class="car-details">
+            <!-- Image Gallery -->
+            <div class="image-gallery">
+              <img id="main-image" src="" alt="Car image" class="main-image" />
+              <div class="thumbnail-grid">
+                <img
+                  src=""
+                  alt="Car view 1"
+                  class="thumbnail"
+                  tabindex="0"
+                  role="button"
+                  aria-label="View car image 1"
+                />
+                <img
+                  src=""
+                  alt="Car view 2"
+                  class="thumbnail"
+                  tabindex="0"
+                  role="button"
+                  aria-label="View car image 2"
+                />
+                <img
+                  src=""
+                  alt="Car view 3"
+                  class="thumbnail"
+                  tabindex="0"
+                  role="button"
+                  aria-label="View car image 3"
+                />
+                <img
+                  src=""
+                  alt="Car view 4"
+                  class="thumbnail"
+                  tabindex="0"
+                  role="button"
+                  aria-label="View car image 4"
+                />
+              </div>
+            </div>
+
+            <!-- Details Content -->
+            <div class="details-content">
+              <!-- Content will be rendered by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>CarRental</h3>
+          <p>Your trusted partner for car rentals.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="cars.html">Browse Cars</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Car Rental Reservation Platform. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      ↑
+    </button>
+
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>

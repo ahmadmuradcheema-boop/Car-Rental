@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Make a car rental reservation - Easy multi-step booking process"
+    />
+    <title>Reservation - Car Rental Reservation Platform</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <a
+          href="../index.html"
+          class="logo"
+          aria-label="Car Rental Platform Home"
+        >
+          <span class="logo-icon">🚗</span>
+          <span>CarRental</span>
+        </a>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="cars.html" class="nav-link">Cars</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle dark mode"
+          >
+            🌙
+          </button>
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="section">
+        <div class="container">
+          <h1 class="section-title">Make a Reservation</h1>
+
+          <form id="reservation-form" class="reservation-form" novalidate>
+            <!-- Step Indicator -->
+            <div class="step-indicator">
+              <div class="step active" data-step="1">
+                <div class="step-number">1</div>
+                <div class="step-label">Details</div>
+              </div>
+              <div class="step" data-step="2">
+                <div class="step-number">2</div>
+                <div class="step-label">Add-ons</div>
+              </div>
+              <div class="step" data-step="3">
+                <div class="step-number">3</div>
+                <div class="step-label">Review</div>
+              </div>
+            </div>
+
+            <!-- Step 1: Details -->
+            <div class="step-content active" data-step="1">
+              <h2>Booking Details</h2>
+
+              <div class="form-group">
+                <label for="reservation-car">Select Car *</label>
+                <select id="reservation-car" name="car" required>
+                  <option value="">Choose a car...</option>
+                  <!-- Options will be populated by JavaScript -->
+                </select>
+              </div>
+
+              <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem"
+              >
+                <div class="form-group">
+                  <label for="first-name">First Name *</label>
+                  <input
+                    type="text"
+                    id="first-name"
+                    name="first-name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last Name *</label>
+                  <input type="text" id="last-name" name="last-name" required />
+                </div>
+              </div>
+
+              <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem"
+              >
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone *</label>
+                  <input type="tel" id="phone" name="phone" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="pickup-location">Pickup Location *</label>
+                <input
+                  type="text"
+                  id="pickup-location"
+                  name="pickup-location"
+                  placeholder="Enter city or airport"
+                  required
+                />
+              </div>
+
+              <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem"
+              >
+                <div class="form-group">
+                  <label for="pickup-date">Pickup Date *</label>
+                  <input
+                    type="date"
+                    id="pickup-date"
+                    name="pickup-date"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="pickup-time">Pickup Time *</label>
+                  <input
+                    type="time"
+                    id="pickup-time"
+                    name="pickup-time"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem"
+              >
+                <div class="form-group">
+                  <label for="return-date">Return Date *</label>
+                  <input
+                    type="date"
+                    id="return-date"
+                    name="return-date"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="return-time">Return Time *</label>
+                  <input
+                    type="time"
+                    id="return-time"
+                    name="return-time"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Add-ons -->
+            <div class="step-content" data-step="2">
+              <h2>Add-ons & Extras</h2>
+              <p style="color: var(--text-secondary); margin-bottom: 1.5rem">
+                Enhance your rental experience with these optional add-ons.
+              </p>
+
+              <div class="addon-item">
+                <label>
+                  <input type="checkbox" id="addon-gps" name="addon-gps" />
+                  <div>
+                    <strong>GPS Navigation</strong>
+                    <p
+                      style="
+                        margin: 0;
+                        font-size: 0.875rem;
+                        color: var(--text-secondary);
+                      "
+                    >
+                      Never get lost with our premium GPS system
+                    </p>
+                  </div>
+                </label>
+                <span class="addon-price">$10/day</span>
+              </div>
+
+              <div class="addon-item">
+                <label>
+                  <input
+                    type="checkbox"
+                    id="addon-child-seat"
+                    name="addon-child-seat"
+                  />
+                  <div>
+                    <strong>Child Seat</strong>
+                    <p
+                      style="
+                        margin: 0;
+                        font-size: 0.875rem;
+                        color: var(--text-secondary);
+                      "
+                    >
+                      Safe and comfortable child seat for your little ones
+                    </p>
+                  </div>
+                </label>
+                <span class="addon-price">$15/day</span>
+              </div>
+
+              <div class="addon-item">
+                <label>
+                  <input
+                    type="checkbox"
+                    id="addon-insurance"
+                    name="addon-insurance"
+                  />
+                  <div>
+                    <strong>Full Coverage Insurance</strong>
+                    <p
+                      style="
+                        margin: 0;
+                        font-size: 0.875rem;
+                        color: var(--text-secondary);
+                      "
+                    >
+                      Comprehensive insurance coverage for peace of mind
+                    </p>
+                  </div>
+                </label>
+                <span class="addon-price">$25/day</span>
+              </div>
+
+              <div class="form-group" style="margin-top: 2rem">
+                <label for="special-requests"
+                  >Special Requests (Optional)</label
+                >
+                <textarea
+                  id="special-requests"
+                  name="special-requests"
+                  rows="4"
+                  placeholder="Any special requests or notes..."
+                  maxlength="500"
+                ></textarea>
+                <div id="char-counter" class="character-counter">
+                  0/500 characters
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Review -->
+            <div class="step-content" data-step="3">
+              <h2>Review & Confirm</h2>
+              <p style="color: var(--text-secondary); margin-bottom: 1.5rem">
+                Please review your reservation details before confirming.
+              </p>
+
+              <div class="price-breakdown" id="price-breakdown-review">
+                <!-- Price breakdown will be populated by JavaScript -->
+              </div>
+
+              <div
+                style="
+                  margin-top: 2rem;
+                  padding: 1.5rem;
+                  background: var(--bg-secondary);
+                  border-radius: var(--radius-lg);
+                "
+              >
+                <h3>Total Amount</h3>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 1rem;
+                  "
+                >
+                  <span style="font-size: 1.5rem; font-weight: 700"
+                    >Total:</span
+                  >
+                  <span
+                    id="total-price"
+                    style="
+                      font-size: 2rem;
+                      font-weight: 700;
+                      color: var(--primary-color);
+                    "
+                    >$0</span
+                  >
+                </div>
+              </div>
+
+              <div style="margin-top: 2rem">
+                <label
+                  style="
+                    display: flex;
+                    align-items: start;
+                    gap: 0.5rem;
+                    cursor: pointer;
+                  "
+                >
+                  <input type="checkbox" required style="margin-top: 0.25rem" />
+                  <span
+                    >I agree to the
+                    <a
+                      href="#"
+                      onclick="openModal('Terms & Conditions', '<p>By proceeding with this reservation, you agree to our terms and conditions...</p>'); return false;"
+                      >Terms & Conditions</a
+                    >
+                    *</span
+                  >
+                </label>
+              </div>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="form-actions">
+              <button
+                type="button"
+                id="prev-step"
+                class="btn btn-secondary"
+                style="display: none"
+              >
+                Previous
+              </button>
+              <div style="flex: 1"></div>
+              <button type="button" id="next-step" class="btn btn-primary">
+                Next Step
+              </button>
+              <button
+                type="submit"
+                id="submit-reservation"
+                class="btn btn-primary"
+                style="display: none"
+              >
+                Confirm Reservation
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>CarRental</h3>
+          <p>Your trusted partner for car rentals.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Car Rental Reservation Platform. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      ↑
+    </button>
+
+    <script src="../assets/js/app.js"></script>
+    <script>
+      // Populate car select options
+      document.addEventListener("DOMContentLoaded", () => {
+        const carSelect = document.getElementById("reservation-car");
+        if (carSelect && typeof carsData !== "undefined") {
+          carsData.forEach((car) => {
+            const option = document.createElement("option");
+            option.value = car.id;
+            option.textContent = `${car.name} - ${formatCurrency(
+              car.pricePerDay
+            )}/day`;
+            carSelect.appendChild(option);
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

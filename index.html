@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Car Rental Reservation Platform - Book your perfect car rental with ease"
+    />
+    <title>Car Rental Reservation Platform - Home</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="logo" aria-label="Car Rental Platform Home">
+          <span class="logo-icon">🚗</span>
+          <span>CarRental</span>
+        </a>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="pages/cars.html" class="nav-link">Cars</a></li>
+          <li><a href="pages/about.html" class="nav-link">About</a></li>
+          <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+          <li><a href="pages/faq.html" class="nav-link">FAQ</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle dark mode"
+          >
+            🌙
+          </button>
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Hero Section -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <h1 id="hero-title">Find Your Perfect Ride</h1>
+          <p>
+            Book a car rental in minutes. Choose from our wide selection of
+            vehicles and hit the road with confidence.
+          </p>
+
+          <!-- Search Widget -->
+          <div class="search-widget">
+            <form
+              id="home-search-form"
+              class="search-form"
+              aria-label="Search for available cars"
+            >
+              <div class="form-group">
+                <label for="home-pickup-location">Pickup Location</label>
+                <input
+                  type="text"
+                  id="home-pickup-location"
+                  name="pickup-location"
+                  placeholder="Enter city or airport"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="home-pickup-date">Pickup Date</label>
+                <input
+                  type="date"
+                  id="home-pickup-date"
+                  name="pickup-date"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="home-pickup-time">Pickup Time</label>
+                <input
+                  type="time"
+                  id="home-pickup-time"
+                  name="pickup-time"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="home-return-date">Return Date</label>
+                <input
+                  type="date"
+                  id="home-return-date"
+                  name="return-date"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="home-return-time">Return Time</label>
+                <input
+                  type="time"
+                  id="home-return-time"
+                  name="return-time"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="home-car-type">Car Type</label>
+                <select id="home-car-type" name="car-type">
+                  <option value="">All Types</option>
+                  <option value="Sedan">Sedan</option>
+                  <option value="SUV">SUV</option>
+                  <option value="Luxury">Luxury</option>
+                  <option value="Compact">Compact</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="home-search-submit" class="sr-only">Search</label>
+                <button
+                  type="submit"
+                  id="home-search-submit"
+                  class="btn btn-primary btn-full"
+                >
+                  Search Cars
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trust Badges -->
+      <section class="section" aria-labelledby="trust-title">
+        <div class="container">
+          <h2 id="trust-title" class="sr-only">Why Choose Us</h2>
+          <div class="trust-badges">
+            <div class="trust-badge">
+              <div class="trust-badge-icon">✓</div>
+              <div class="trust-badge-text">
+                <strong>Best Price Guarantee</strong>
+                <p>Find a lower price? We'll match it.</p>
+              </div>
+            </div>
+            <div class="trust-badge">
+              <div class="trust-badge-icon">🔒</div>
+              <div class="trust-badge-text">
+                <strong>Secure Booking</strong>
+                <p>Your data is safe with us.</p>
+              </div>
+            </div>
+            <div class="trust-badge">
+              <div class="trust-badge-icon">⭐</div>
+              <div class="trust-badge-text">
+                <strong>4.8/5 Rating</strong>
+                <p>Trusted by thousands of customers.</p>
+              </div>
+            </div>
+            <div class="trust-badge">
+              <div class="trust-badge-icon">🚗</div>
+              <div class="trust-badge-text">
+                <strong>Wide Selection</strong>
+                <p>100+ vehicles to choose from.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Cars -->
+      <section class="section" aria-labelledby="featured-title">
+        <div class="container">
+          <h2 id="featured-title" class="section-title">Featured Vehicles</h2>
+          <div class="cards-grid" id="featured-cars">
+            <!-- Cars will be rendered by JavaScript -->
+          </div>
+          <div style="text-align: center; margin-top: 2rem">
+            <a href="pages/cars.html" class="btn btn-primary">View All Cars</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section
+        class="section"
+        aria-labelledby="testimonials-title"
+        style="background: var(--bg-secondary)"
+      >
+        <div class="container">
+          <h2 id="testimonials-title" class="section-title">
+            What Our Customers Say
+          </h2>
+          <div class="testimonials">
+            <div class="testimonial">
+              <p class="testimonial-text">
+                "Excellent service and great car selection. The booking process
+                was smooth and the car was in perfect condition. Highly
+                recommend!"
+              </p>
+              <p class="testimonial-author">Sarah Johnson</p>
+              <div class="testimonial-rating">★★★★★</div>
+            </div>
+            <div class="testimonial">
+              <p class="testimonial-text">
+                "Best car rental experience I've had. The prices are competitive
+                and the customer support is outstanding. Will definitely use
+                again."
+              </p>
+              <p class="testimonial-author">Michael Chen</p>
+              <div class="testimonial-rating">★★★★★</div>
+            </div>
+            <div class="testimonial">
+              <p class="testimonial-text">
+                "Quick and easy booking process. The car was exactly as
+                described and the pickup/return process was seamless. 5 stars!"
+              </p>
+              <p class="testimonial-author">Emily Rodriguez</p>
+              <div class="testimonial-rating">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Teaser -->
+      <section class="section" aria-labelledby="faq-teaser-title">
+        <div class="container">
+          <h2 id="faq-teaser-title" class="section-title">
+            Frequently Asked Questions
+          </h2>
+          <div style="max-width: 800px; margin: 0 auto">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What documents do I need to rent a car?
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  <p>
+                    You'll need a valid driver's license, a credit card in your
+                    name, and proof of insurance (if required in your location).
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can I cancel or modify my reservation?
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  <p>
+                    Yes, you can cancel or modify your reservation up to 24
+                    hours before your pickup time. Visit the "My Booking" page
+                    to make changes.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What happens if I return the car late?
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  <p>
+                    Late returns may incur additional charges. We recommend
+                    contacting us if you anticipate being late to discuss
+                    options.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="text-align: center; margin-top: 2rem">
+            <a href="pages/faq.html" class="btn btn-secondary">View All FAQs</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>CarRental</h3>
+          <p>
+            Your trusted partner for car rentals. We make it easy to find and
+            book the perfect vehicle for your journey.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/cars.html">Browse Cars</a></li>
+            <li><a href="pages/about.html">About Us</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Support</h3>
+          <ul class="footer-links">
+            <li><a href="pages/faq.html">FAQ</a></li>
+            <li>
+              <a
+                href="#"
+                onclick="openModal('Terms & Conditions', '<p>Terms and conditions content goes here...</p>'); return false;"
+                >Terms & Conditions</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="openModal('Privacy Policy', '<p>Privacy policy content goes here...</p>'); return false;"
+                >Privacy Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: info@carrental.com</p>
+          <p>Phone: 1-800-CAR-RENT</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Car Rental Reservation Platform. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      ↑
+    </button>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
